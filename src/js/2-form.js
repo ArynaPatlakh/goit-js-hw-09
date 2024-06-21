@@ -8,8 +8,8 @@ const input = document.querySelector('input');
 const textarea = document.querySelector('textarea');
 
 form.addEventListener('input', e => {
-  formData.email = e.currentTarget.email.value;
-  formData.message = e.currentTarget.message.value;
+  formData.email = e.currentTarget.email.value.trim();
+  formData.message = e.currentTarget.message.value.trim();
   saveToLS('feedback-form-state', formData);
 });
 
@@ -30,6 +30,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   form.elements.email.value = data?.email ?? '';
   form.elements.message.value = data?.message ?? '';
+  formData.email = data?.email ?? '';
+  formData.message = data?.message ?? '';
 });
 
 //*===================================================
