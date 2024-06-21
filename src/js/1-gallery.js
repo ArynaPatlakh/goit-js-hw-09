@@ -1,7 +1,6 @@
-
 import SimpleLightbox from 'simplelightbox';
 
-// import 'simplelightbox/dist/simple-lightbox.min.css';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const images = [
   {
@@ -89,20 +88,10 @@ const markup = imegesTemplane(images);
 galeryElem.innerHTML = markup;
 //*==================================================================
 
-// galeryElem.addEventListener('click', e => {
-//   e.preventDefault();
+const options = {captionDelay: 250}
+let card = new SimpleLightbox('.gallery a', options);
 
-//   if (e.target === e.currentTarget) return;
-
-//   const itemElem = e.target.closest('img');
-//   modelOpen(itemElem);
-// });
 
 //*==================================================================
 
-// function modelOpen(item) {
-//   const instance = basicLightbox.create(`
-//     <img src="${item.dataset.source}" width="1100" height="640">
-// `);
-//   instance.show();
-// }
+
