@@ -21,7 +21,10 @@ form.addEventListener('submit', e => {
   } else {
     console.log(formData);
     form.reset();
+
     localStorage.removeItem('feedback-form-state');
+    formData = { email: '', message: '' };
+    console.log(formData);
   }
 });
 
