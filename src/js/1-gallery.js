@@ -88,10 +88,10 @@ const markup = imegesTemplane(images);
 galeryElem.innerHTML = markup;
 //*==================================================================
 
-const options = {captionDelay: 250}
+const options = {
+  captionDelay: 250,
+  captionsData: 'alt',
+};
 let card = new SimpleLightbox('.gallery a', options);
 
-
 //*==================================================================
-
-
